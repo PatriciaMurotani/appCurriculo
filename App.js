@@ -4,6 +4,7 @@ import {StyleSheet, View, Image, Text, Alert, TouchableOpacity} from 'react-nati
 import {Icon} from 'react-native-vector-icons/Feather'
 
 import foto from './src/assets/fotoPatricia.jpeg';
+import Card from './src/assets/components/Card';
 
 const App = () => {
 
@@ -35,29 +36,16 @@ const App = () => {
         </View>
       </View>
 
-      <View style={style.card_container}>
-        <View style={style.card}>
-          <View style={style.card_header}>
-            <Text>Objetivo</Text>
-          </View>
-          <View style={style.card_content}>
-            <Text style={style.card_content_text}>Em busca de uma oportunidade para ingressar na área de desenvolvimento e programação.</Text>
-          </View>
-        </View >
-      </View>
+      <Card titulo="Objetivo">
+          <Text style={style.card_content_text}>Em busca de uma oportunidade para ingressar na área de desenvolvimento e programação.</Text>
+      </Card>
 
-      <View style={style.card_container}>
-        <View style={style.card}>
-          <View style={style.card_header}>
-            <Text>Conhecimentos nas Linguagens</Text>
-          </View>
-          <View style={style.card_content}>
-            <Text style={style.card_content_text}>HTML e CSS</Text>
-            <Text style={style.card_content_text}>JavaScript</Text>
-            <Text style={style.card_content_text}>C#</Text>
-          </View>
-        </View >
-      </View>
+      <Card titulo="Conhecimento nas linguagens">
+          <Text style={style.card_content_text}>HTML e CSS</Text>
+          <Text style={style.card_content_text}>JavaScript</Text>
+          <Text style={style.card_content_text}>C#</Text>
+      </Card>
+          
     </View>
   );
 };
@@ -93,23 +81,6 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
     width: '60%',
     marginTop: 20,
-  },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  card: {
-    width: "60%",
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#939393',
-    padding: 10,
-    backgroundColor: '#fff',
-  },
-  card_content: {
-    marginTop: 10,
   },
   card_content_text: {
     color: '#939393',
